@@ -154,25 +154,31 @@ Hotel-Booking-Analysis
 <tr>
 <td align="center"><b>Hotel Booking Distribution</b></td>
 <td align="center"><b>Lead Time vs Cancellation Rates</b></td>
+</tr>
+
+<tr>
+<td><img src="screenshot1.png" width="420"></td>
+<td><img src="screenshot2.png" width="420"></td>
+</tr>
+
+<tr>
 <td align="center"><b>Average Daily Rate Trend</b></td>
+<td align="center"><b>Relationship between Booking Changes and Total Special Requests</b></td>
 </tr>
 
 <tr>
-<td><img src="screenshot1.png" width="300"></td>
-<td><img src="screenshot2.png" width="300"></td>
-<td><img src="screenshot3.png" width="300"></td>
+<td><img src="screenshot3.png" width="420"></td>
+<td><img src="screenshot4.png" width="420"></td>
 </tr>
 
 <tr>
-<td align="center"><b>Realtionship between Booking Changes to total special requests </b></td>
-<td align="center"><b>Cancellation rate by season</b></td>
+<td align="center"><b>Cancellation Rate by Season</b></td>
 <td align="center"><b>Lead Time Distribution</b></td>
 </tr>
 
 <tr>
-<td><img src="screenshot4.png" width="300"></td>
-<td><img src="screenshot5.png" width="300"></td>
-<td><img src="screenshot6.png" width="300"></td>
+<td><img src="screenshot5.png" width="420"></td>
+<td><img src="screenshot6.png" width="420"></td>
 </tr>
 </table>
 
