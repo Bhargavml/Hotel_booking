@@ -153,8 +153,8 @@ Hotel-Booking-Analysis
 <table>
 <tr>
 <td align="center"><b>Hotel Booking Distribution</b></td>
-<td align="center"><b>Monthly Booking Trends</b></td>
-<td align="center"><b>Booking Cancellations</b></td>
+<td align="center"><b>Lead Time vs Cancellation Rates</b></td>
+<td align="center"><b>Average Daily Rate Trend</b></td>
 </tr>
 
 <tr>
@@ -164,8 +164,8 @@ Hotel-Booking-Analysis
 </tr>
 
 <tr>
-<td align="center"><b>Market Segment Distribution</b></td>
-<td align="center"><b>Average Stay Duration</b></td>
+<td align="center"><b>Realtionship between Booking Changes to total special requests </b></td>
+<td align="center"><b>Cancellation rate by season</b></td>
 <td align="center"><b>Lead Time Distribution</b></td>
 </tr>
 
