@@ -1,197 +1,190 @@
-# App Insights Unlocked
-### Google Play Store Data Analysis
+# Hotel Booking Demand Analysis
 
-This project performs **Exploratory Data Analysis (EDA)** on the Google Play Store dataset to identify trends in app performance, ratings, installs, and pricing.
+This project analyzes hotel booking data to understand patterns in reservations, cancellations, customer segments, and seasonal demand.  
+The analysis uses **Exploratory Data Analysis (EDA)** techniques to identify trends that influence hotel occupancy and booking behavior.
 
-The analysis highlights patterns related to **high-performing categories, user engagement, and pricing strategies** in the Play Store ecosystem.
-
----
-
-## Overview
-
-| Item | Details |
-|-----|-----|
-| Dataset | Google Play Store Apps |
-| Total Apps | 10,841 |
-| Total Features | 13 |
-| Apps with Rating Data | 9,367 |
-| Missing Ratings | 1,474 |
-| Average Rating | 4.18 |
+The goal is to uncover insights that help hotels **optimize pricing, manage cancellations, and improve occupancy rates**.
 
 ---
 
-## Project Objectives
+## Dataset Summary
 
-- Identify high-performing app categories  
-- Analyze the relationship between **app size and ratings**  
-- Study the impact of **pricing on reviews and installs**  
-- Explore patterns in **user engagement and downloads**
+<table>
+<tr>
 
----
+<td>
 
-## Dataset Information
+### Dataset Metrics
 
-### Dataset Columns
-
-| Column |
-|------|
-| App |
-| Category |
-| Rating |
-| Reviews |
-| Size |
-| Installs |
-| Type |
-| Price |
-| Content Rating |
-| Genres |
-| Last Updated |
-| Current Version |
-| Android Version |
-
----
-
-## Data Cleaning
-
-The dataset required preprocessing before analysis.
-
-### Missing Values
-
-| Column | Missing Values |
+| Metric | Value |
 |------|------|
-| Rating | 1,474 |
-| Type | 1 |
-| Content Rating | 1 |
-| Current Version | 8 |
-| Android Version | 3 |
+| Total Bookings | 119,390 |
+| Total Features | 32 |
+| Hotel Types | 2 |
+| Customer Segments | 4 |
 
-### Cleaning Steps
+</td>
 
-- Converted **Reviews** column to numeric  
-- Cleaned **Installs** column by removing `+` and commas  
-- Converted **Price** column to numeric  
-- Converted **Last Updated** column to datetime  
-- Removed **duplicate records**  
-- Handled **missing values**
+<td>
 
----
+### Booking Distribution
 
-## App Type Distribution
+| Hotel Type | Bookings |
+|------|------|
+| City Hotel | 79,330 |
+| Resort Hotel | 40,060 |
 
-| Type | Number of Apps |
-|------|---------------|
-| Free | 9,591 |
-| Paid | 765 |
+</td>
 
-The Play Store is dominated by **free applications**.
+<td>
 
----
+### Cancellation Statistics
 
-## Exploratory Data Analysis
+| Metric | Value |
+|------|------|
+| Total Cancellations | 44,224 |
+| Cancellation Rate | 37% |
 
-The analysis was conducted in three stages.
+</td>
 
-### 1. Basic Analysis
-
-- Dataset overview
-- Category distribution
-- Rating distribution
-- Free vs Paid app comparison
+</tr>
+</table>
 
 ---
 
-### 2. Intermediate Analysis
+## Key Dataset Features
 
-The following relationships were explored:
-
-- Installs vs Ratings
-- Category popularity
-- App size vs rating relationship
-- Review patterns across app types
-
-#### Average Reviews by App Type
-
-| Type | Average Reviews |
-|------|---------------|
-| Free | 437,373 |
-| Paid | 11,900 |
-
-Free apps receive significantly **more user engagement and reviews**.
-
----
-
-### 3. Advanced Insights
-
-#### Average App Size by Category
-
-| Category | Avg Size (MB) |
-|--------|-------------|
-| GAME | 39.36 |
-| FAMILY | 25.96 |
-| SPORTS | 20.39 |
-| PARENTING | 20.26 |
-| TRAVEL_AND_LOCAL | 18.51 |
-
-Game apps tend to have the **largest average file sizes**.
+| Feature | Description |
+|------|------|
+| hotel | Type of hotel (City or Resort) |
+| is_canceled | Booking cancellation status |
+| lead_time | Days between booking and arrival |
+| arrival_date_month | Month of arrival |
+| stays_in_weekend_nights | Weekend nights stayed |
+| stays_in_week_nights | Weekday nights stayed |
+| adults | Number of adults |
+| children | Number of children |
+| meal | Type of meal booked |
+| country | Customer country |
+| market_segment | Market segment type |
+| distribution_channel | Booking distribution channel |
+| previous_cancellations | Previous cancellations by customer |
 
 ---
 
-## High Install Apps
+## Booking Insights
 
-Examples of applications with **over 1 Billion installs** include:
+<table>
+<tr>
 
-- Google Drive
-- Google Play Games
-- Facebook
-- Instagram
+<td>
 
-These applications dominate the platform in terms of **user engagement and downloads**.
+### Customer Segments
+
+| Segment | Share |
+|------|------|
+| Online Travel Agents | ~47% |
+| Direct Bookings | ~12% |
+| Corporate | ~6% |
+| Offline Agents | ~15% |
+
+</td>
+
+<td>
+
+### Average Stay
+
+| Metric | Value |
+|------|------|
+| Avg Weekend Nights | 0.93 |
+| Avg Week Nights | 2.50 |
+| Avg Total Stay | ~3.4 Nights |
+
+</td>
+
+<td>
+
+### Lead Time
+
+| Metric | Value |
+|------|------|
+| Avg Lead Time | 104 Days |
+| Max Lead Time | 737 Days |
+
+</td>
+
+</tr>
+</table>
+
+---
+
+## Exploratory Analysis
+
+The project explores several important booking trends:
+
+- Monthly booking demand patterns
+- Hotel type booking distribution
+- Cancellation behavior
+- Customer market segments
+- Average stay duration
+- Lead time patterns
 
 ---
 
 ## Project Structure
 
 ```
-App-Insights-Analysis
+Hotel-Booking-Analysis
 │
-├── App_Insights.ipynb
+├── Hotel_bookings.ipynb
 ├── screenshot1.png
 ├── screenshot2.png
 ├── screenshot3.png
 ├── screenshot4.png
+├── screenshot5.png
+├── screenshot6.png
 └── README.md
 ```
 
 ---
 
-## Project Visualizations
+## Data Visualizations
 
-The following visualizations were generated during the analysis:
+<table>
+<tr>
+<td align="center"><b>Hotel Booking Distribution</b></td>
+<td align="center"><b>Monthly Booking Trends</b></td>
+<td align="center"><b>Booking Cancellations</b></td>
+</tr>
 
-- Category Distribution
-- Rating Distribution
-- Installs vs Rating Scatter Plot
-- Trend of App Updates Over Time
+<tr>
+<td><img src="screenshot1.png" width="300"></td>
+<td><img src="screenshot2.png" width="300"></td>
+<td><img src="screenshot3.png" width="300"></td>
+</tr>
 
-```
-![Category Distribution](screenshot1.png)
+<tr>
+<td align="center"><b>Market Segment Distribution</b></td>
+<td align="center"><b>Average Stay Duration</b></td>
+<td align="center"><b>Lead Time Distribution</b></td>
+</tr>
 
-![Rating Distribution](screenshot2.png)
-
-![Installs vs Rating](screenshot3.png)
-
-![App Updates Trend](screenshot4.png)
-```
+<tr>
+<td><img src="screenshot4.png" width="300"></td>
+<td><img src="screenshot5.png" width="300"></td>
+<td><img src="screenshot6.png" width="300"></td>
+</tr>
+</table>
 
 ---
 
 ## Key Insights
 
-- Free apps represent **over 90% of Play Store applications**
-- Free apps receive **significantly more reviews**
-- Game applications tend to have the **largest file sizes**
-- Most app ratings fall between **4.0 and 4.5**
-- Several apps exceed **1 billion installs**
+- **City hotels receive significantly more bookings than resort hotels**
+- Nearly **37% of bookings are cancelled**
+- Most bookings come through **online travel agents**
+- Average stay duration is approximately **3–4 nights**
+- Booking lead time averages **over 100 days**
 
 ---
 
